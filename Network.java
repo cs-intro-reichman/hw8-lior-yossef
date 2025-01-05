@@ -115,10 +115,10 @@ public class Network {
 
     // Returns a textual description of all the users in this network, and who they follow.
     public String toString() {
-        String str = "Network: ";
+        String str = "Network: \n";
 
         for (int i = 0; i < userCount; i++) {
-            str += users[i] + "\n";
+            str += users[i] + (i == userCount - 1 ? "" : "\n");
         }
 
        return str;
