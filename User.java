@@ -44,7 +44,7 @@
     /** If this user follows the given name, returns true; otherwise returns false. */
     public boolean follows(String name) {
         for (int i = 0; i < fCount; i++) {
-            if (follows[i].equals(name)) {
+            if (follows[i].toLowerCase().equals(name.toLowerCase())) {
                 return true;
             }
         }
@@ -68,7 +68,7 @@
      *  If the name is not in the list, does nothing and returns false. */
     public boolean removeFollowee(String name) {
         for (int i = 0; i < fCount; i++) {
-            if (follows[i].equals(name)) {
+            if (follows[i].toLowerCase().equals(name.toLowerCase())) {
                 for (int j = i; j < fCount - 1; j++) {
                     follows[j] = follows[j + 1];
                 }
